@@ -1,0 +1,14 @@
+Loading netlist......
+
+Edif netlist reader and Sdf netlist reader completed successfully.
+WARNING 26447: In reading command, signal Q does not exist; signal in
+command is ignored.
+WARNING 26447: In reading command, signal RES does not exist; signal in
+command is ignored.
+WARNING 26447: In reading command, signal Q does not exist; signal in
+command is ignored.
+WARNING 26447: In reading command, signal RES does not exist; signal in
+command is ignored.
+WARNING 26447: In reading command, signal RES does not exist; signal in
+command is ignored.
+Operation RUN ends.

@@ -1,0 +1,19 @@
+#$ TOOL ispLEVER Classic 1.4.00.04.27.10
+#$ MODULE labor2
+S3;
+RES C -> Q 
+$
+00->0;
+1C->X;
+1C->X;
+1C->X;
+1C->X;
+1C->X;
+1C->X;
+1C->X;
+1C->X;
+1C->X;
+1C->X;
+1C->X;
+1C->X;
+$

@@ -1,0 +1,88 @@
+#$ TOOL ispLEVER Classic 1.4.00.04.27.10
+#$ DATE Tue Dec 20 12:13:56 2011
+#$ TITLE schema3.bls 
+#$ MODULE schema3
+#$ PINS 4 Q1'o'  C Q'o'  RES
+#$ NODES 19 N_26'o'  N_25'o'  N_22'o'  N_24'o'  N_21'o'  N_1'o'  N_3'o'  N_4'o'  N_6'o'  N_7'o'  N_9'o'  N_10'o'  N_11'o'  N_12'o'  \
+#  N_14'o'  N_15'o'  N_17'o'  N_18'o'  N_20'o' 
+.model schema3
+.inputs N_1.BLIF Q1.BLIF N_4.BLIF N_15.BLIF N_14.BLIF C.BLIF N_18.BLIF \
+N_12.BLIF N_24.BLIF N_21.BLIF N_10.BLIF N_22.BLIF N_26.BLIF N_6.BLIF N_7.BLIF \
+N_3.BLIF N_25.BLIF RES.BLIF N_17.BLIF N_20.BLIF N_11.BLIF Q.BLIF N_9.BLIF
+.outputs N_21 N_3 N_24 N_20 Q1 N_18 N_11 Q N_10 N_9 N_22 N_6 N_17 N_14 N_15 \
+N_12 N_4 N_7 N_1 N_26 N_25
+
+.subckt g_2and A.BLIF=N_1.BLIF B.BLIF=Q1.BLIF Y=N_21
+
+.subckt g_2and A.BLIF=Q1.BLIF B.BLIF=N_4.BLIF Y=N_3
+
+.subckt g_2nand A.BLIF=N_15.BLIF B.BLIF=N_14.BLIF YN=N_24
+
+.subckt g_2nand A.BLIF=C.BLIF B.BLIF=N_18.BLIF YN=N_20
+
+.subckt g_2nand A.BLIF=N_12.BLIF B.BLIF=N_18.BLIF YN=Q1
+
+.subckt g_2nand A.BLIF=C.BLIF B.BLIF=N_24.BLIF YN=N_18
+
+.subckt g_2nand A.BLIF=N_21.BLIF B.BLIF=N_10.BLIF YN=N_11
+
+.subckt g_2nand A.BLIF=N_4.BLIF B.BLIF=N_10.BLIF YN=Q
+
+.subckt g_2nand A.BLIF=N_21.BLIF B.BLIF=N_22.BLIF YN=N_10
+
+.subckt g_2nand A.BLIF=N_26.BLIF B.BLIF=N_6.BLIF YN=N_9
+
+.subckt g_2nand A.BLIF=N_7.BLIF B.BLIF=N_6.BLIF YN=N_22
+
+.subckt g_2nand A.BLIF=N_26.BLIF B.BLIF=N_3.BLIF YN=N_6
+
+.subckt g_2nand A.BLIF=N_25.BLIF B.BLIF=N_14.BLIF YN=N_17
+
+.subckt g_2nand A.BLIF=N_25.BLIF B.BLIF=N_12.BLIF YN=N_14
+
+.subckt g_3nand A.BLIF=RES.BLIF B.BLIF=N_17.BLIF C.BLIF=N_24.BLIF YN=N_15
+
+.subckt g_3nand A.BLIF=RES.BLIF B.BLIF=N_20.BLIF C.BLIF=Q1.BLIF YN=N_12
+
+.subckt g_3nand A.BLIF=RES.BLIF B.BLIF=N_11.BLIF C.BLIF=Q.BLIF YN=N_4
+
+.subckt g_3nand A.BLIF=RES.BLIF B.BLIF=N_9.BLIF C.BLIF=N_22.BLIF YN=N_7
+
+.subckt g_inv A.BLIF=C.BLIF YN=N_1
+
+.subckt g_inv A.BLIF=N_21.BLIF YN=N_26
+
+.subckt g_inv A.BLIF=C.BLIF YN=N_25
+.end
+.model g_2and
+.inputs A.BLIF B.BLIF
+.outputs Y
+.names A.BLIF B.BLIF Y
+11 1
+0- 0
+-0 0
+.end
+.model g_2nand
+.inputs A.BLIF B.BLIF
+.outputs YN
+.names A.BLIF B.BLIF YN
+0- 1
+-0 1
+11 0
+.end
+.model g_3nand
+.inputs A.BLIF B.BLIF C.BLIF
+.outputs YN
+.names C.BLIF B.BLIF A.BLIF YN
+-0- 1
+0-- 1
+--0 1
+111 0
+.end
+.model g_inv
+.inputs A.BLIF
+.outputs YN
+.names A.BLIF YN
+0 1
+1 0
+.end

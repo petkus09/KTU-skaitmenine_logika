@@ -1,0 +1,21 @@
+MODULE Labor2;
+"inputs
+RES, C pin;
+"outputs
+Q pin istype 'com';
+Test_vectors ([RES,C] -> Q)
+[0,0] -> 0;
+[1,.c.] -> .x.;
+[1,.c.] -> .x.;
+[1,.c.] -> .x.;
+[1,.c.] -> .x.;
+[1,.c.] -> .x.;
+[1,.c.] -> .x.;
+[1,.c.] -> .x.;
+[1,.c.] -> .x.;
+[1,.c.] -> .x.;
+[1,.c.] -> .x.;
+[1,.c.] -> .x.;
+[1,.c.] -> .x.;
+end;
+

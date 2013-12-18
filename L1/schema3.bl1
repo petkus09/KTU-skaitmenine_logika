@@ -1,0 +1,99 @@
+#$ TOOL ispLEVER Classic 1.4.00.04.27.10
+#$ DATE Tue Dec 20 12:13:56 2011
+#$ TITLE schema3.bls 
+#$ MODULE schema3
+#$ PINS 4 Q1'o'  C Q'o'  RES
+#$ NODES 19 N_26'o'  N_25'o'  N_22'o'  N_24'o'  N_21'o'  N_1'o'  N_3'o'  N_4'o'  N_6'o'  N_7'o'  N_9'o'  N_10'o'  N_11'o'  N_12'o'  \
+#  N_14'o'  N_15'o'  N_17'o'  N_18'o'  N_20'o' 
+.model schema3
+.inputs N_1.BLIF Q1.BLIF N_4.BLIF N_15.BLIF N_14.BLIF C.BLIF N_18.BLIF \
+N_12.BLIF N_24.BLIF N_21.BLIF N_10.BLIF N_22.BLIF N_26.BLIF N_6.BLIF N_7.BLIF \
+N_3.BLIF N_25.BLIF RES.BLIF N_17.BLIF N_20.BLIF N_11.BLIF Q.BLIF N_9.BLIF
+.outputs N_21 N_3 N_24 N_20 Q1 N_18 N_11 Q N_10 N_9 N_22 N_6 N_17 N_14 N_15 \
+N_12 N_4 N_7 N_1 N_26 N_25
+.names N_1.BLIF Q1.BLIF N_21
+11 1
+0- 0
+-0 0
+.names Q1.BLIF N_4.BLIF N_3
+11 1
+0- 0
+-0 0
+.names N_15.BLIF N_14.BLIF N_24
+0- 1
+-0 1
+11 0
+.names C.BLIF N_18.BLIF N_20
+0- 1
+-0 1
+11 0
+.names N_12.BLIF N_18.BLIF Q1
+0- 1
+-0 1
+11 0
+.names C.BLIF N_24.BLIF N_18
+0- 1
+-0 1
+11 0
+.names N_21.BLIF N_10.BLIF N_11
+0- 1
+-0 1
+11 0
+.names N_4.BLIF N_10.BLIF Q
+0- 1
+-0 1
+11 0
+.names N_21.BLIF N_22.BLIF N_10
+0- 1
+-0 1
+11 0
+.names N_26.BLIF N_6.BLIF N_9
+0- 1
+-0 1
+11 0
+.names N_7.BLIF N_6.BLIF N_22
+0- 1
+-0 1
+11 0
+.names N_26.BLIF N_3.BLIF N_6
+0- 1
+-0 1
+11 0
+.names N_25.BLIF N_14.BLIF N_17
+0- 1
+-0 1
+11 0
+.names N_25.BLIF N_12.BLIF N_14
+0- 1
+-0 1
+11 0
+.names N_24.BLIF N_17.BLIF RES.BLIF N_15
+-0- 1
+0-- 1
+--0 1
+111 0
+.names Q1.BLIF N_20.BLIF RES.BLIF N_12
+-0- 1
+0-- 1
+--0 1
+111 0
+.names Q.BLIF N_11.BLIF RES.BLIF N_4
+-0- 1
+0-- 1
+--0 1
+111 0
+.names N_22.BLIF N_9.BLIF RES.BLIF N_7
+-0- 1
+0-- 1
+--0 1
+111 0
+.names C.BLIF N_1
+0 1
+1 0
+.names N_21.BLIF N_26
+0 1
+1 0
+.names C.BLIF N_25
+0 1
+1 0
+.end

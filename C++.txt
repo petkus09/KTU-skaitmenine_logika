@@ -1,0 +1,30 @@
+&& - AND
+|| - OR
+! - NOT
+
+for ( n=0, i=100 ; n!=i ; n++, i-- ) - Atlieka cikla iki penkiadesimties, nes vienas mazeja nuo 100 ir kitas dideja nuo 0
+
+continue - praleidzia cikla ir eina ties kita reiksme, pvz :  if (n==5) continue;
+
+Jei reikia issaugoti reiksme, funkcijos kintamuosiuose rasyti (int& kintamasis)
+
+int billy [5] = { 16, 2, 77, 40, 12071 };  - Taip galima is anksto nustatyti masyvo elementus
+
+int billy [] - Kai nenorime nurodyti maximumo.
+
+int jimmy [3][5]; - dvimaciai masyvai
+
+void procedure (int arg[]) - funkcijos aprase masyvo naudojimas ( daznai antras f-jos aprase yra masyvo MAX) 
+
+procedure (myarray); - kreipimasis i funkcija su masyvu
+
+void procedure (int myarray[][3][4]) - dvimaciams masyvams
+
+struct product {
+  int weight;
+  float price;               -----------------_____>>>>>> Iraso tipo masyvai(pav.)
+} ;
+
+product apple;
+product banana, melon;
+

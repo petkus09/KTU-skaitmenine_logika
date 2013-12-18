@@ -1,0 +1,24 @@
+#$ TOOL SCH2BLF 1.4.00.03 
+#$ TITLE schema2.bls 
+#$ MODULE schema2 
+#$ PINS 10  NQ Q NQ1 Q1 D x2 x4 x3 x1 RES
+#$ NODES 6 N_7 N_1 N_2 N_3 N_4 N_6 
+#$ INTERFACE g_2and1 3 AN'i' B'i' Y'o'
+#$ INTERFACE g_2nand 3 A'i' B'i' YN'o'
+#$ INTERFACE g_3nand 4 A'i' B'i' C'i' YN'o'
+#$ INTERFACE g_inv 2 A'i' YN'o'
+#$ INTERFACE g_xor 3 A'i' B'i' Y'o'
+#$ PRIMITIVE I5 g_2and1 3 x3 x4 N_6
+#$ PRIMITIVE I10 g_2nand 3 NQ1 N_3 Q1
+#$ PRIMITIVE I12 g_2nand 3 x1 N_1 N_2
+#$ PRIMITIVE I13 g_2nand 3 NQ N_1 Q
+#$ PRIMITIVE I14 g_2nand 3 x1 Q1 N_1
+#$ PRIMITIVE I8 g_2nand 3 N_7 N_3 N_4
+#$ PRIMITIVE I9 g_2nand 3 N_7 D N_3
+#$ PRIMITIVE I11 g_3nand 4 RES N_4 Q1 NQ1
+#$ PRIMITIVE I15 g_3nand 4 RES N_2 Q NQ
+#$ PRIMITIVE I6 g_inv 2 x1 N_7
+#$ PRIMITIVE I7 g_xor 3 x2 N_6 D
+.model schema2
+
+.end

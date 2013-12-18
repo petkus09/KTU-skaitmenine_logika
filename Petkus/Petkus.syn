@@ -1,0 +1,11 @@
+JDF B
+// Created by Version 1.4 
+PROJECT Petkus
+DESIGN petkus Normal
+DEVKIT LC4064ZE-5UMN64C
+ENTRY ABEL/Schematic
+MODULE schema.sch
+MODSTYLE schema Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE schema

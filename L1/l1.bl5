@@ -1,0 +1,17 @@
+#$ TOOL  ispLEVER Classic 1.4.00.04.27.10
+#$ DATE  Mon Nov 07 13:04:52 2011
+#$ MODULE  schema3
+#$ TITLE  schema3.bls 
+#$ PINS 7 x6 x5 x4 x3 x2 x1 y
+.model schema3 
+.inputs x5.BLIF x4.BLIF x3.BLIF x6.BLIF x2.BLIF x1.BLIF
+.outputs y
+.names x5.BLIF x4.BLIF x3.BLIF x6.BLIF x2.BLIF x1.BLIF y
+100001 1
+010101 1
+1-1000 1
+-11100 1
+-10110 1
+111-11 1
+00--1- 1
+.end

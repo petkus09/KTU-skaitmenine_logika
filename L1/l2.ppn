@@ -1,0 +1,22 @@
+//
+// Software Version :  ispLEVER Classic 1.4.00.04.27.10  
+// Project Name	    :  l2
+// Targeted Device  :  LC4064V-75T48C
+// Date             :  Sat Oct 06 20:17:54 2012
+//
+                   GNDIO0          SYS           5
+                   VCCIO0          SYS           6
+                       y3          OUT           7
+                      VCC          SYS           12
+                      GND          SYS           13
+                       x1          IN            18
+                       x2          IN            19
+                       y2          OUT           20
+                   GNDIO1          SYS           29
+                   VCCIO1          SYS           30
+                       y1          OUT           31
+                      VCC          SYS           36
+                      GND          SYS           37
+                       x4          IN            42
+                        C          IN            43
+                       x3          IN            44

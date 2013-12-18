@@ -1,0 +1,45 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.4.00.04.27.10 Equations File            -|
+|- Copyright(C), 1992-2001, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+N_1.D = !( x2 & !N_8.Q
+    # !x2 & N_8.Q
+    # x3 & !N_7.Q
+    # !x3 & N_7.Q
+    # x4 & !N_6.Q
+    # !x4 & N_6.Q
+    # x1 & !N_9.Q
+    # !x1 & N_9.Q ) ; (8 pterms, 8 signals)
+N_1.C = C ; (1 pterm, 1 signal)
+
+N_6.D = x4 ; (1 pterm, 1 signal)
+N_6.C = C ; (1 pterm, 1 signal)
+
+N_7.D = x3 ; (1 pterm, 1 signal)
+N_7.C = C ; (1 pterm, 1 signal)
+
+N_8.D = x2 ; (1 pterm, 1 signal)
+N_8.C = C ; (1 pterm, 1 signal)
+
+N_9.D = x1 ; (1 pterm, 1 signal)
+N_9.C = C ; (1 pterm, 1 signal)
+
+y1 = x3 & x2
+    # !x1 ; (2 pterms, 3 signals)
+
+y2 = !( x2 & !N_8.Q
+    # !x2 & N_8.Q
+    # x3 & !N_7.Q
+    # !x3 & N_7.Q
+    # x4 & !N_6.Q
+    # !x4 & N_6.Q
+    # x1 & !N_9.Q
+    # !x1 & N_9.Q ) ; (8 pterms, 8 signals)
+
+y3 = y2 & N_1.Q ; (1 pterm, 2 signals)
+

@@ -1,0 +1,74 @@
+#$ TOOL ispLEVER Classic 1.4.00.04.27.10
+#$ DATE Mon Dec 19 14:18:32 2011
+#$ TITLE schema2.bls 
+#$ MODULE schema2
+#$ PINS 10 NQ'o'  Q'o'  NQ1'o'  Q1'o'  D'o'  x2 x4 x3 x1 RES
+#$ NODES 6 N_7'o'  N_1'o'  N_2'o'  N_3'o'  N_4'o'  N_6'o' 
+.model schema2
+.inputs x3.BLIF x4.BLIF NQ1.BLIF N_3.BLIF x1.BLIF N_1.BLIF NQ.BLIF Q1.BLIF \
+N_7.BLIF D.BLIF RES.BLIF N_4.BLIF N_2.BLIF Q.BLIF x2.BLIF N_6.BLIF
+.outputs N_6 Q1 N_2 Q N_1 N_4 N_3 NQ1 NQ N_7 D
+
+.subckt g_2and1 AN.BLIF=x3.BLIF B.BLIF=x4.BLIF Y=N_6
+
+.subckt g_2nand A.BLIF=NQ1.BLIF B.BLIF=N_3.BLIF YN=Q1
+
+.subckt g_2nand A.BLIF=x1.BLIF B.BLIF=N_1.BLIF YN=N_2
+
+.subckt g_2nand A.BLIF=NQ.BLIF B.BLIF=N_1.BLIF YN=Q
+
+.subckt g_2nand A.BLIF=x1.BLIF B.BLIF=Q1.BLIF YN=N_1
+
+.subckt g_2nand A.BLIF=N_7.BLIF B.BLIF=N_3.BLIF YN=N_4
+
+.subckt g_2nand A.BLIF=N_7.BLIF B.BLIF=D.BLIF YN=N_3
+
+.subckt g_3nand A.BLIF=RES.BLIF B.BLIF=N_4.BLIF C.BLIF=Q1.BLIF YN=NQ1
+
+.subckt g_3nand A.BLIF=RES.BLIF B.BLIF=N_2.BLIF C.BLIF=Q.BLIF YN=NQ
+
+.subckt g_inv A.BLIF=x1.BLIF YN=N_7
+
+.subckt g_xor A.BLIF=x2.BLIF B.BLIF=N_6.BLIF Y=D
+.end
+.model g_2and1
+.inputs AN.BLIF B.BLIF
+.outputs Y
+.names AN.BLIF B.BLIF Y
+01 1
+1- 0
+-0 0
+.end
+.model g_2nand
+.inputs A.BLIF B.BLIF
+.outputs YN
+.names A.BLIF B.BLIF YN
+0- 1
+-0 1
+11 0
+.end
+.model g_3nand
+.inputs A.BLIF B.BLIF C.BLIF
+.outputs YN
+.names C.BLIF B.BLIF A.BLIF YN
+-0- 1
+0-- 1
+--0 1
+111 0
+.end
+.model g_inv
+.inputs A.BLIF
+.outputs YN
+.names A.BLIF YN
+0 1
+1 0
+.end
+.model g_xor
+.inputs A.BLIF B.BLIF
+.outputs Y
+.names A.BLIF B.BLIF Y
+10 1
+01 1
+00 0
+11 0
+.end

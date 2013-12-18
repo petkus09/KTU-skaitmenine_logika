@@ -1,0 +1,12 @@
+[NameRules]
+InstanceSeparator=^
+
+[Waves]
+Count=7
+Net0=RES
+Net1=X1
+Net2=X2
+Net3=X3
+Net4=X4
+Net5=Q
+Net6=D

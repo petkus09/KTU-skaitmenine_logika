@@ -1,0 +1,57 @@
+#$ TOOL ispLEVER Classic 1.4.00.04.27.10
+#$ DATE Mon Dec 19 14:18:32 2011
+#$ TITLE schema2.bls 
+#$ MODULE schema2
+#$ PINS 10 NQ'o'  Q'o'  NQ1'o'  Q1'o'  D'o'  x2 x4 x3 x1 RES
+#$ NODES 6 N_7'o'  N_1'o'  N_2'o'  N_3'o'  N_4'o'  N_6'o' 
+.model schema2
+.inputs x3.BLIF x4.BLIF NQ1.BLIF N_3.BLIF x1.BLIF N_1.BLIF NQ.BLIF Q1.BLIF \
+N_7.BLIF D.BLIF RES.BLIF N_4.BLIF N_2.BLIF Q.BLIF x2.BLIF N_6.BLIF
+.outputs N_6 Q1 N_2 Q N_1 N_4 N_3 NQ1 NQ N_7 D
+.names x3.BLIF x4.BLIF N_6
+01 1
+1- 0
+-0 0
+.names NQ1.BLIF N_3.BLIF Q1
+0- 1
+-0 1
+11 0
+.names x1.BLIF N_1.BLIF N_2
+0- 1
+-0 1
+11 0
+.names NQ.BLIF N_1.BLIF Q
+0- 1
+-0 1
+11 0
+.names x1.BLIF Q1.BLIF N_1
+0- 1
+-0 1
+11 0
+.names N_7.BLIF N_3.BLIF N_4
+0- 1
+-0 1
+11 0
+.names N_7.BLIF D.BLIF N_3
+0- 1
+-0 1
+11 0
+.names Q1.BLIF N_4.BLIF RES.BLIF NQ1
+-0- 1
+0-- 1
+--0 1
+111 0
+.names Q.BLIF N_2.BLIF RES.BLIF NQ
+-0- 1
+0-- 1
+--0 1
+111 0
+.names x1.BLIF N_7
+0 1
+1 0
+.names x2.BLIF N_6.BLIF D
+10 1
+01 1
+00 0
+11 0
+.end
